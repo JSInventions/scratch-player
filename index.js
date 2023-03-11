@@ -18,7 +18,7 @@ scripts = {} //Only initialized if there's a Sprite() lying around
  * ```
  */
 export default function Sprite(name, cI, cost, x, y, s, r){
-        spriteName,
+        spriteName = name,
         costumeI = cI,
         costume = cost
         x = y,
