@@ -3,12 +3,12 @@
   "name": "scratch-player",
   "version": "1.0.0",
   "description": "Written Scratch 3.0 Player, by hand",
-  "main": "index.cjs",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.cjs"
-  },
+  "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.21"
+  }
 }

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Emulator</title>
+    <script src="guijs" type="module"></script>
+</head>
+
+<body>
+    <div id="gui">
+        <div id="nav">
+            <div id="text-nav">
+                <h2 id="title">
+                    Scratch Emulator
+                    <h4 id="version">
+                        v0.1
+                    </h4>
+                    <h2>
+            </div>
+        </div>
+        <div id="renderer">
+            <button id="flag">
+                <svg width="30px" height="30px" id="GreenFlag" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16.63 17.5">
+                    <title>Run</title>
+                    <path class="cls-1"
+                        d="M.75,2A6.44,6.44,0,0,1,8.44,2h0a6.44,6.44,0,0,0,7.69,0V12.4a6.44,6.44,0,0,1-7.69,0h0a6.44,6.44,0,0,0-7.69,0" />
+                    <line class="cls-2" x1="0.75" y1="16.75" x2="0.75" y2="0.75" />
+                </svg>
+            </button>
+            <canvas id="vm"></canvas>
+            <h2>Description</h2>
+            <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+        </div>
+        <div id="footer" onclick="document.location='https://scratch.mit.edu/users/wojtekgame'">
+            <h4>
+                Made with ❤️ by WojtekGame
+            </h4>
+            <div id="footer-1">
+                <h4>Click here to go to his profile...</h4>
+                </h4>
+            </div>
+            <script>
+                const f = document.getElementById('footer');
+                const f1 = document.getElementById('footer-1');
+                f1.style.display = "none";
+                f.onpointerenter = function () {
+                    f.style.height = "100px";
+                    f1.style.display = "block";
+                }
+                f.onpointerleave = function () {
+                    f.style.height = "60px";
+                    f1.style.display = "none";
+                }
+            </script>
+        </div>
+    </div>
+    <style>
+        #gui {
+            font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+        }
+
+        #renderer {
+            display: grid;
+            justify-content: center;
+        }
+
+        #version {
+            margin-top: -40px;
+            color: rgb(18, 90, 190);
+            margin-left: 250px;
+        }
+
+        #text-nav {
+            margin-top: 10px;
+            color: #ffffff;
+        }
+
+        #nav {
+            text-align: center;
+            background-color: rgb(77, 151, 255);
+            border-bottom-color: rgba(0, 0, 0, 0.1);
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 3px 0px;
+            color: rgb(87, 94, 117);
+            display: block;
+            height: 50px;
+            left: 0px;
+            position: fixed;
+            top: 0px;
+            right: 0;
+            z-index: 10
+        }
+
+        #GreenFlag {
+            margin-top: 2px;
+        }
+
+        #flag {
+            background-color: transparent;
+            border-width: 0px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            margin-top: 50px;
+            border-radius: 3px;
+        }
+
+        #flag:hover {
+            background-color: rgb(237, 237, 255);
+        }
+
+        #vm {
+            width: 480px;
+            height: 360px;
+            border-width: 3px;
+            border-color: #000000;
+            margin-top: 10px;
+            border-style: solid;
+            border-radius: 10px;
+            border-color: gray;
+        }
+
+        #desc {
+            resize: none;
+            width: 480px;
+            height: 360px;
+            border-width: 3px;
+            border-color: #e9d045;
+            background-color: #fff2a8;
+            margin-top: 10px;
+            border-style: solid;
+            border-radius: 10px;
+            font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+            font-size: 20px;
+        }
+
+        #footer {
+            text-align: center;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 60px;
+            width: 300px;
+            background-color: #b3b3b3;
+            border-top-right-radius: 10px;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        .cls-1,
+        .cls-2 {
+            fill: #4cbf56;
+            stroke: #45993d;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .cls-2 {
+            stroke-width: 1.5px;
+        }
+    </style>
+</body>
+
+</html>
